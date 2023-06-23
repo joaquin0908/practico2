@@ -1,0 +1,7 @@
+{
+  "name": "apiComilona",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

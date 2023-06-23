@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+   
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-searchbar (ionInput)="buscarCategoria($event)"> </ion-searchbar>
+  <ion-list  [inset]="true" *ngFor="let comida of arrayMeal" [routerLink]="['/platos', comida.strCategory]" >
+    
+    <ion-card>
+    
+      <ion-card-header>
+        <ion-card-title>{{comida.strCategory}}</ion-card-title>
+        <ion-avatar>
+          <img [src]="comida.strCategoryThumb">
+        </ion-avatar>
+      
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{comida.strCategoryDescription}}
+      </ion-card-content>
+    </ion-card>
+  
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-list>
+ 
+</ion-content>

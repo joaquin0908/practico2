@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>platos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">platos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-list [inset]="true">
+    <ion-item *ngFor="let comida of ArrayPlatos">
+      <ion-avatar>
+        <img [src]="comida.strMealThumb">
+      </ion-avatar>
+      {{comida.strMeal}}
+    </ion-item>
+  </ion-list>
+
+
+<!--   <pre>
+    {{ ArrayPlatos | json }}
+</pre>
+</ion-content> -->
